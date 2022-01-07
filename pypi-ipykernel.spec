@@ -4,7 +4,7 @@
 #
 Name     : pypi-ipykernel
 Version  : 6.6.1
-Release  : 85
+Release  : 86
 URL      : https://files.pythonhosted.org/packages/dd/e7/62d8b675ab84460f27427524232239a23842379df33fb994f8cb4cf52a00/ipykernel-6.6.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/dd/e7/62d8b675ab84460f27427524232239a23842379df33fb994f8cb4cf52a00/ipykernel-6.6.1.tar.gz
 Summary  : IPython Kernel for Jupyter
@@ -14,16 +14,12 @@ Requires: pypi-ipykernel-license = %{version}-%{release}
 Requires: pypi-ipykernel-python = %{version}-%{release}
 Requires: pypi-ipykernel-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
-Provides: ipykernel
-Provides: ipykernel-python
-Provides: ipykernel-python3
-BuildRequires : importlib_metadata
-BuildRequires : ipython
 BuildRequires : ipython_genutils
 BuildRequires : jupyter_client
 BuildRequires : jupyter_core
 BuildRequires : pexpect
 BuildRequires : pypi(debugpy)
+BuildRequires : pypi(importlib_metadata)
 BuildRequires : pypi(ipython)
 BuildRequires : pypi(jupyter_client)
 BuildRequires : pypi(jupyter_core)
@@ -82,7 +78,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641445932
+export SOURCE_DATE_EPOCH=1641520097
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib

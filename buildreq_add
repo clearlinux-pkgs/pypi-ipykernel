@@ -1,7 +1,7 @@
 # This file contains additional build requirements that did not get
 # picked up automatically. One name per line, no whitespace.
-importlib_metadata
-ipython
+pypi(importlib_metadata)
+pypi(ipython)
 ipython_genutils
 jupyter_client
 jupyter_core
