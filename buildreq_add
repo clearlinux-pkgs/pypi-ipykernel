@@ -3,7 +3,7 @@
 pypi(importlib_metadata)
 pypi(ipython)
 ipython_genutils
-jupyter_client
-jupyter_core
+pypi(jupyter_client)
+pypi(jupyter_core)
 pexpect
 python-dateutil
