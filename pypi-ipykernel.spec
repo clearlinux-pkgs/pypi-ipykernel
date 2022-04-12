@@ -4,7 +4,7 @@
 #
 Name     : pypi-ipykernel
 Version  : 6.13.0
-Release  : 97
+Release  : 98
 URL      : https://files.pythonhosted.org/packages/6d/c6/46b54eb61be37d98d130935b91a0a6e4ce8fca8a49bb15ba263f5e31718a/ipykernel-6.13.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/6d/c6/46b54eb61be37d98d130935b91a0a6e4ce8fca8a49bb15ba263f5e31718a/ipykernel-6.13.0.tar.gz
 Summary  : IPython Kernel for Jupyter
@@ -79,7 +79,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1649690038
+export SOURCE_DATE_EPOCH=1649765662
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
