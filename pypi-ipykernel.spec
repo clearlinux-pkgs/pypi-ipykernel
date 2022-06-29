@@ -4,7 +4,7 @@
 #
 Name     : pypi-ipykernel
 Version  : 6.13.0
-Release  : 99
+Release  : 100
 URL      : https://files.pythonhosted.org/packages/6d/c6/46b54eb61be37d98d130935b91a0a6e4ce8fca8a49bb15ba263f5e31718a/ipykernel-6.13.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/6d/c6/46b54eb61be37d98d130935b91a0a6e4ce8fca8a49bb15ba263f5e31718a/ipykernel-6.13.0.tar.gz
 Summary  : IPython Kernel for Jupyter
@@ -63,6 +63,7 @@ Requires: pypi(matplotlib_inline)
 Requires: pypi(nest_asyncio)
 Requires: pypi(packaging)
 Requires: pypi(psutil)
+Requires: pypi(pyzmq)
 Requires: pypi(tornado)
 Requires: pypi(traitlets)
 
@@ -82,7 +83,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1653337563
+export SOURCE_DATE_EPOCH=1656526712
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -124,7 +125,7 @@ popd
 rm -f %{buildroot}*/usr/share/jupyter/kernels/python3/logo-64x64.png
 rm -f %{buildroot}*/usr/share/jupyter/kernels/python3/logo-32x32.png
 rm -f %{buildroot}*/usr/share/jupyter/kernels/python3/kernel.json
-/usr/bin/elf-move.py avx2 %{buildroot}-v3 %{buildroot}/usr/share/clear/optimized-elf/ %{buildroot}/usr/share/clear/filemap/filemap-%{name}
+/usr/bin/elf-move.py avx2 %{buildroot}-v3 %{buildroot} %{buildroot}/usr/share/clear/filemap/filemap-%{name}
 
 %files
 %defattr(-,root,root,-)
