@@ -4,7 +4,7 @@
 #
 Name     : pypi-ipykernel
 Version  : 6.13.0
-Release  : 106
+Release  : 107
 URL      : https://files.pythonhosted.org/packages/6d/c6/46b54eb61be37d98d130935b91a0a6e4ce8fca8a49bb15ba263f5e31718a/ipykernel-6.13.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/6d/c6/46b54eb61be37d98d130935b91a0a6e4ce8fca8a49bb15ba263f5e31718a/ipykernel-6.13.0.tar.gz
 Summary  : IPython Kernel for Jupyter
@@ -29,6 +29,9 @@ BuildRequires : pypi(setuptools)
 BuildRequires : pypi(tornado)
 BuildRequires : pypi(traitlets)
 BuildRequires : pypi(wheel)
+# Suppress stripping binaries
+%define __strip /bin/true
+%define debug_package %{nil}
 
 %description
 # IPython Kernel for Jupyter
@@ -56,6 +59,7 @@ Summary: python3 components for the pypi-ipykernel package.
 Group: Default
 Requires: python3-core
 Provides: pypi(ipykernel)
+Requires: pypi(comm)
 Requires: pypi(debugpy)
 Requires: pypi(ipython)
 Requires: pypi(jupyter_client)
@@ -83,15 +87,15 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1666711120
+export SOURCE_DATE_EPOCH=1672282387
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=auto "
-export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
-export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
-export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
+export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
