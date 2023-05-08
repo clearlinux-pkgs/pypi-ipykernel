@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-ipykernel
-Version  : 6.22.0
-Release  : 113
-URL      : https://files.pythonhosted.org/packages/bc/18/a773c8f970269988c56678c7b8739b106c5557e419864481c90949db3754/ipykernel-6.22.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/bc/18/a773c8f970269988c56678c7b8739b106c5557e419864481c90949db3754/ipykernel-6.22.0.tar.gz
+Version  : 6.23.0
+Release  : 114
+URL      : https://files.pythonhosted.org/packages/1e/63/b81afb6a1ddb1d7eea12260f8117a30a599744994079d2affbd796ea52dc/ipykernel-6.23.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/1e/63/b81afb6a1ddb1d7eea12260f8117a30a599744994079d2affbd796ea52dc/ipykernel-6.23.0.tar.gz
 Summary  : IPython Kernel for Jupyter
 Group    : Development/Tools
 License  : BSD-3-Clause
@@ -30,7 +30,6 @@ BuildRequires : pypi(python_dateutil)
 %description
 # IPython Kernel for Jupyter
 [![Build Status](https://github.com/ipython/ipykernel/actions/workflows/ci.yml/badge.svg?query=branch%3Amain++)](https://github.com/ipython/ipykernel/actions/workflows/ci.yml/badge.svg?query=branch%3Amain++)
-[![codecov](https://codecov.io/gh/ipython/ipykernel/branch/main/graph/badge.svg?token=SyksDOcIJa)](https://codecov.io/gh/ipython/ipykernel)
 [![Documentation Status](https://readthedocs.org/projects/ipykernel/badge/?version=latest)](http://ipykernel.readthedocs.io/en/latest/?badge=latest)
 
 %package data
@@ -81,10 +80,10 @@ python3 components for the pypi-ipykernel package.
 
 
 %prep
-%setup -q -n ipykernel-6.22.0
-cd %{_builddir}/ipykernel-6.22.0
+%setup -q -n ipykernel-6.23.0
+cd %{_builddir}/ipykernel-6.23.0
 pushd ..
-cp -a ipykernel-6.22.0 buildavx2
+cp -a ipykernel-6.23.0 buildavx2
 popd
 
 %build
@@ -92,15 +91,15 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1679412260
+export SOURCE_DATE_EPOCH=1683559142
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 -m build --wheel --skip-dependency-check --no-isolation
 pushd ../buildavx2/
