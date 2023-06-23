@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-ipykernel
-Version  : 6.23.2
-Release  : 116
-URL      : https://files.pythonhosted.org/packages/10/73/a84616856e0584f62899ba10741543cd72155262c462850a7d291cdd7817/ipykernel-6.23.2.tar.gz
-Source0  : https://files.pythonhosted.org/packages/10/73/a84616856e0584f62899ba10741543cd72155262c462850a7d291cdd7817/ipykernel-6.23.2.tar.gz
+Version  : 6.23.3
+Release  : 117
+URL      : https://files.pythonhosted.org/packages/17/82/e7be69d22275d1ebb40f550c24c93e64e7d9c0e8d674746db4230a6335a9/ipykernel-6.23.3.tar.gz
+Source0  : https://files.pythonhosted.org/packages/17/82/e7be69d22275d1ebb40f550c24c93e64e7d9c0e8d674746db4230a6335a9/ipykernel-6.23.3.tar.gz
 Summary  : IPython Kernel for Jupyter
 Group    : Development/Tools
 License  : BSD-3-Clause
@@ -80,10 +80,10 @@ python3 components for the pypi-ipykernel package.
 
 
 %prep
-%setup -q -n ipykernel-6.23.2
-cd %{_builddir}/ipykernel-6.23.2
+%setup -q -n ipykernel-6.23.3
+cd %{_builddir}/ipykernel-6.23.3
 pushd ..
-cp -a ipykernel-6.23.2 buildavx2
+cp -a ipykernel-6.23.3 buildavx2
 popd
 
 %build
@@ -91,7 +91,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1686668939
+export SOURCE_DATE_EPOCH=1687533920
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
