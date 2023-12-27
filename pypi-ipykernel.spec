@@ -7,7 +7,7 @@
 #
 Name     : pypi-ipykernel
 Version  : 6.28.0
-Release  : 129
+Release  : 130
 URL      : https://files.pythonhosted.org/packages/a1/12/ec23e176d7931a305b76631c0079885fb32424db190b6790cb25ded3f337/ipykernel-6.28.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/a1/12/ec23e176d7931a305b76631c0079885fb32424db190b6790cb25ded3f337/ipykernel-6.28.0.tar.gz
 Summary  : IPython Kernel for Jupyter
