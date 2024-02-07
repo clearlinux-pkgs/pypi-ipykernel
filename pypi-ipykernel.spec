@@ -6,10 +6,10 @@
 # autospec commit: 213bb01
 #
 Name     : pypi-ipykernel
-Version  : 6.29.1
-Release  : 132
-URL      : https://files.pythonhosted.org/packages/32/4c/4f05760490c09e749cc2f4526ef66d99fcd12ecf15299064fbc97a046f7b/ipykernel-6.29.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/32/4c/4f05760490c09e749cc2f4526ef66d99fcd12ecf15299064fbc97a046f7b/ipykernel-6.29.1.tar.gz
+Version  : 6.29.2
+Release  : 133
+URL      : https://files.pythonhosted.org/packages/87/e4/6f1b4ab7d7fb9268d67a6c7c4520a7d76a5bbafd7abb716ed43b006153e0/ipykernel-6.29.2.tar.gz
+Source0  : https://files.pythonhosted.org/packages/87/e4/6f1b4ab7d7fb9268d67a6c7c4520a7d76a5bbafd7abb716ed43b006153e0/ipykernel-6.29.2.tar.gz
 Summary  : IPython Kernel for Jupyter
 Group    : Development/Tools
 License  : BSD-3-Clause
@@ -82,13 +82,13 @@ python3 components for the pypi-ipykernel package.
 
 
 %prep
-%setup -q -n ipykernel-6.29.1
-cd %{_builddir}/ipykernel-6.29.1
+%setup -q -n ipykernel-6.29.2
+cd %{_builddir}/ipykernel-6.29.2
 pushd ..
-cp -a ipykernel-6.29.1 buildavx2
+cp -a ipykernel-6.29.2 buildavx2
 popd
 pushd ..
-cp -a ipykernel-6.29.1 buildapx
+cp -a ipykernel-6.29.2 buildapx
 popd
 
 %build
@@ -96,7 +96,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1707234923
+export SOURCE_DATE_EPOCH=1707319825
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
