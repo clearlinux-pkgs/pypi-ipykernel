@@ -3,3 +3,4 @@
 IPython.core.profiledir-python
 appnope
 importlib-metadata
+pypi(zmq)
