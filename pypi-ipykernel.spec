@@ -7,7 +7,7 @@
 #
 Name     : pypi-ipykernel
 Version  : 6.29.5
-Release  : 136
+Release  : 137
 URL      : https://files.pythonhosted.org/packages/e9/5c/67594cb0c7055dc50814b21731c22a601101ea3b1b50a9a1b090e11f5d0f/ipykernel-6.29.5.tar.gz
 Source0  : https://files.pythonhosted.org/packages/e9/5c/67594cb0c7055dc50814b21731c22a601101ea3b1b50a9a1b090e11f5d0f/ipykernel-6.29.5.tar.gz
 Summary  : IPython Kernel for Jupyter
